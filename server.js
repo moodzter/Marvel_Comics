@@ -6,6 +6,7 @@ const mongoose = require ('mongoose');
 const cors = require('cors');
 const app = express ();
 const db = mongoose.connection;
+const ComicController = require('./controllers/ComicController.js')
 require('dotenv').config();
 //___________________
 //Port
@@ -44,9 +45,7 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 // Routes
 //___________________
 //localhost:3000
-app.get('/' , (req, res) => {
-    res.send('Hello World! and sup foo');
-});
+app.use('/comics', ComicController)
 
 //___________________
 //Listener
