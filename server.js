@@ -6,6 +6,7 @@ const mongoose = require ('mongoose');
 const cors = require('cors');
 const app = express ();
 const db = mongoose.connection;
+const ComicController = require('./controllers/comicController.js')
 require('dotenv').config();
 //___________________
 //Port
@@ -39,14 +40,8 @@ app.use(express.static('public'));
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project
 
-
-//__________________
-// Routes
-//___________________
-//localhost:3000
-app.get('/' , (req, res) => {
-    res.send('Hello World! and sup foo');
-});
+//=====>Requiring Controller
+app.use('/comics', ComicController)
 
 //___________________
 //Listener
