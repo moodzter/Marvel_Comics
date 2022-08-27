@@ -8,7 +8,7 @@ const marvelSchema = new mongoose.Schema (
         author: String,
         releaseDate: String,
         description: String,
-        rating: Boolean
+        rating: Number
 
 
     }
