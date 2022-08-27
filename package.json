@@ -1,5 +1,8 @@
 {
   "name": "marvel_comics",
+  "engines": {
+    "node": "16.15.1"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/moodzter/Marvel_Comics#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.5.3"
   }
