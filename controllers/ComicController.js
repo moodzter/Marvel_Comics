@@ -24,6 +24,12 @@ router.get('/', (req, res) => {
     })
 });
 
+//=====>Show Route
+router.get('/:id', (req, res) => {
+    Comics.findById(req.params.id, (err, data) => {
+        res.json(data)
+    })
+});
 
 //=====>UPDATE ROUTE
 router.put('/:id', (req, res) => {
